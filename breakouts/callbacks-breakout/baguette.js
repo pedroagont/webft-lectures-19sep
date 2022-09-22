@@ -1,9 +1,11 @@
+// HIGHER ORDER FUNCTION
 const doBaguette = (ingredients, options, preparation) => {
   console.log('Doing baguette...');
   const baguette = preparation(ingredients, options);
   console.log('Baguette done!', baguette);
 };
 
+// CALLBACK DECLARATION
 const myPreparation = (ingredients, options) => {
   let baguette = '🥖';
 
@@ -28,6 +30,7 @@ const myOptions = {
   protein: '🍗'
 };
 
+// CALLING CALLBACK AS A DECLARED FUNCTION
 doBaguette(myIngredients, myOptions, myPreparation);
 
 const otherIngredients = ['🥦', '🥕', '🥑'];
@@ -36,6 +39,7 @@ const otherOptions = {
   protein: '🍣'
 };
 
+// CALLING CALLBACK AS AN ANONYMOUS FUNCTION
 doBaguette(otherIngredients, otherOptions, (ingredients, options) => {
   let baguette = '🥖🧂';
 
